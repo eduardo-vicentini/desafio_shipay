@@ -8,7 +8,7 @@ def parser(d):
     adicionado na base de dados.
     O input para correto funcionamento precisa ter:
     estabelecimento, cliente, valor e descrição.
-    Também tem que ter os valores conforme a classe
+    Também, tem que ter os valores conforme a classe
     Transaction definido no models.py.
 
     Retorna (aceito, estabelecimento, cliente, valor, descricao).
@@ -51,9 +51,7 @@ def parser(d):
 
 
 def identificacao_valida(num):
-    """
-    Testa se o número do cpf ou cnpj é válido.
-    """
+    """Testa se o número do cpf ou cnpj é válido. Retorna True ou False."""
     num = re.sub('[\-./]', '', num)
 
     if len(num) == 11 or len(num) == 14:
