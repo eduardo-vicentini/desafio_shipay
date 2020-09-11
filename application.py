@@ -23,8 +23,7 @@ db = SessionLocal()
 
 @app.route("/api/v1/transacao", methods=["POST"])
 def transaction_api():
-    """
-    Returns a JSON response when accessed by a POST method
+    """Returns a JSON response when accessed by a POST method
     with the structure:
         # JSON POST:
         {

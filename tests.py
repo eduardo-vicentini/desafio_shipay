@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# coding: UTF-8
+
 import unittest
 
 from helpers import parser, identificacao_valida

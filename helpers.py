@@ -1,11 +1,17 @@
+#!/usr/bin/python3
+# coding: UTF-8
+
 import re
 
 def parser(d):
-    """
-    Receives a dictionary and parse to fit the
-    structure necessary for the database.
+    """Recebe um dicionário e transforma para poder ser
+    adicionado na base de dados.
+    O input para correto funcionamento precisa ter:
+    estabelecimento, cliente, valor e descrição.
+    Também tem que ter os valores conforme a classe
+    Transaction definido no models.py.
 
-    Returns: (aceito, estabelecimento, cliente, valor, descricao)
+    Retorna (aceito, estabelecimento, cliente, valor, descricao).
     """
     aceito = True
 
