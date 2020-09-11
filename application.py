@@ -42,11 +42,11 @@ def transaction_api():
     database from the db variable.
     """
     if request.method != "POST":
-        return jsonify({'error': "HTTP method not supported!"})
+        return jsonify({'error': "HTTP method not supported!"}), 400
 
     # Handle empty requests
     if not request.json:
-        return jsonify({'error': 'no request received'})
+        return jsonify({'error': 'no request received'}), 401
 
 
     parsed_data = parser(request.json)  
@@ -64,7 +64,7 @@ def transaction_api():
     db.add(transaction_db)
     db.commit()
 
-    return jsonify({'aceito': aceito})
+    return jsonify({'aceito': aceito}), 201
 
 
 if __name__ == '__main__':
